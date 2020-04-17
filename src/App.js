@@ -1,26 +1,48 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styled from 'styled-components';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import Header from './components/Header';
+import Skills from './components/Skills';
+import Experience from './components/Experience';
+import Education from './components/Education';
+import Footer from './components/Footer';
+import FloatingButton from './components/FloatingButton';
 
-export default App;
+import { Column, Row } from './components/Layout';
+
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: ${(props) => props.theme.colors.mercury};
+`;
+
+const Section = styled(Row)`
+  justify-content: center;
+`;
+
+const Body = styled(Column)`
+  flex: 1;
+  margin-top: 200px;
+  justify-content: center;
+  padding: ${(props) => props.theme.measures.mainPadding};
+`;
+
+export default () => (
+  <Container>
+    <Header />
+    <Body>
+      <Section>
+        <Skills />
+      </Section>
+      <Section>
+        <Experience />
+      </Section>
+      <Section>
+        <Education />
+      </Section>
+    </Body>
+    <Footer />
+    <FloatingButton />
+  </Container>
+);
