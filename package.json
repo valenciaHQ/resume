@@ -9,6 +9,8 @@
     "@fortawesome/react-fontawesome": "^0.1.9",
     "eslint-config-airbnb": "^18.1.0",
     "eslint-config-react-app": "^5.2.1",
+    "firebase": "^7.14.1",
+    "formik": "^2.1.4",
     "moment": "^2.24.0",
     "rc-tooltip": "^4.0.3",
     "react": "^16.13.1",
@@ -16,7 +18,9 @@
     "react-event-timeline": "^1.6.3",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.1",
-    "styled-components": "^5.1.0"
+    "react-toastify": "^5.5.0",
+    "styled-components": "^5.1.0",
+    "yup": "^0.28.3"
   },
   "scripts": {
     "start": "PORT=4000 react-scripts start",

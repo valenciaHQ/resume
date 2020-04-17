@@ -16,7 +16,9 @@ import {
   faUserClock,
   faCopy,
   faHatWizard,
-  faCode
+  faCode,
+  faLightbulb,
+  faTimesCircle
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styled, { css } from 'styled-components';
@@ -33,6 +35,18 @@ const Wrapper = styled.div`
       }
     `}
 `;
+
+export const Close = ({ size, onClick }) => (
+  <Wrapper onClick={onClick}>
+    <FontAwesomeIcon icon={faTimesCircle} size={size} />
+  </Wrapper>
+);
+
+export const Light = ({ size, onClick }) => (
+  <Wrapper onClick={onClick}>
+    <FontAwesomeIcon icon={faLightbulb} size={size} />
+  </Wrapper>
+);
 
 export const Code = ({ size, onClick }) => (
   <Wrapper onClick={onClick}>

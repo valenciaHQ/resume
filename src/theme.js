@@ -9,6 +9,7 @@ const theme = {
     blueChill: '#118496',
     mercury: '#e7e7e7',
     gallery: '#EEEEEE',
+    red: '#cc0000',
     white: '#FFFFFF',
     black: '#000000',
     jade: '#04b57b',

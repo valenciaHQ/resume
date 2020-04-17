@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
+import { toast, ToastContainer } from 'react-toastify';
 
 import Header from './components/Header';
 import Skills from './components/Skills';
@@ -9,6 +10,9 @@ import Footer from './components/Footer';
 import FloatingButton from './components/FloatingButton';
 
 import { Column, Row } from './components/Layout';
+import Modal from './components/Modal';
+import ModalContext from './ModalContext';
+import ToastContext from './ToastContext';
 
 const Container = styled.div`
   display: flex;
@@ -28,21 +32,53 @@ const Body = styled(Column)`
   padding: ${(props) => props.theme.measures.mainPadding};
 `;
 
-export default () => (
-  <Container>
-    <Header />
-    <Body>
-      <Section>
-        <Skills />
-      </Section>
-      <Section>
-        <Experience />
-      </Section>
-      <Section>
-        <Education />
-      </Section>
-    </Body>
-    <Footer />
-    <FloatingButton />
-  </Container>
-);
+export default () => {
+  const [modal, setModal] = useState(false);
+  const toogleModal = () => setModal(!modal);
+
+  const showNotification = (message) => {
+    toast(message, {
+      position: 'bottom-center',
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true
+    });
+  };
+
+  return (
+    <ModalContext.Provider value={{ value: modal, toogleModal }}>
+      <ToastContext.Provider value={{ showToast: showNotification }}>
+        <Container>
+          <Header />
+          <Body>
+            <Section>
+              <Skills />
+            </Section>
+            <Section>
+              <Experience />
+            </Section>
+            <Section>
+              <Education />
+            </Section>
+          </Body>
+          <Footer />
+          <FloatingButton />
+          <ModalContext.Consumer>
+            {({ value }) => <Modal show={value} onClose={toogleModal} />}
+          </ModalContext.Consumer>
+          <ToastContainer
+            position="bottom-center"
+            autoClose={5000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnVisibilityChange
+          />
+        </Container>
+      </ToastContext.Provider>
+    </ModalContext.Provider>
+  );
+};

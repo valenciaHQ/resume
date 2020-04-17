@@ -1,58 +1,41 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
+import React, { useState, useContext } from 'react';
 import Tooltip from 'rc-tooltip';
 import 'rc-tooltip/assets/bootstrap.css';
 
-import { Wizard, Code, English, Spanish } from '../Icons';
+import { Wizard, Code, English, Spanish, Light } from '../Icons';
 
-const CodeWrapper = styled.div`
-  position: fixed;
-  right: 100px;
-  top: 55%;
-  color: ${(props) => props.theme.colors.black};
-`;
-
-const SpanishWrapper = styled.div`
-  position: fixed;
-  right: 90px;
-  top: 47%;
-  color: ${(props) => props.theme.colors.black};
-`;
-
-const EnglishWrapper = styled.div`
-  position: fixed;
-  right: 50px;
-  top: 40%;
-  color: ${(props) => props.theme.colors.black};
-`;
-
-const Wrapper = styled.div`
-  position: fixed;
-  right: 10px;
-  top: 50%;
-  color: ${(props) => props.theme.colors.black};
-`;
+import {
+  GITHUB_REPOSITORY,
+  VIEW_ENGLISH,
+  COMMING_SOON,
+  VIEW_CODE,
+  VIEW_SPANISH,
+  SEND_COMMENT
+} from '../../constants';
+import { MainWrapper, CodeWrapper, EnglishWrapper, SpanishWrapper, CommentWrapper } from './styled';
+import ModalContext from '../../ModalContext';
 
 export default () => {
   const [showChilds, setShowChilds] = useState(false);
+  const { toogleModal } = useContext(ModalContext);
 
-  const toogle = () => setShowChilds(!showChilds);
+  const toogleOptions = () => setShowChilds(!showChilds);
   return (
-    <Wrapper>
+    <MainWrapper>
       {showChilds && (
         <>
           <Tooltip
             placement="left"
-            overlay={<span>Ver codigo fuente</span>}
+            overlay={<span>{VIEW_CODE}</span>}
             arrowContent={<div className="rc-tooltip-arrow-inner" />}
           >
             <CodeWrapper>
-              <Code onClick={() => console.log('Open')} size="2x" />
+              <Code onClick={() => window.open(GITHUB_REPOSITORY)} size="2x" />
             </CodeWrapper>
           </Tooltip>
           <Tooltip
             placement="top"
-            overlay={<span>Ver en inglés (proximamente)</span>}
+            overlay={<span>{`${VIEW_ENGLISH} (${COMMING_SOON.toLowerCase()})`}</span>}
             arrowContent={<div className="rc-tooltip-arrow-inner" />}
           >
             <EnglishWrapper>
@@ -61,17 +44,25 @@ export default () => {
           </Tooltip>
           <Tooltip
             placement="left"
-            overlay={<span>Ver en español</span>}
+            overlay={<span>{VIEW_SPANISH}</span>}
             arrowContent={<div className="rc-tooltip-arrow-inner" />}
           >
             <SpanishWrapper>
               <Spanish />
             </SpanishWrapper>
           </Tooltip>
+          <Tooltip
+            placement="left"
+            overlay={<span>{SEND_COMMENT}</span>}
+            arrowContent={<div className="rc-tooltip-arrow-inner" />}
+          >
+            <CommentWrapper>
+              <Light size="2x" onClick={toogleModal} />
+            </CommentWrapper>
+          </Tooltip>
         </>
       )}
-
-      <Wizard onClick={toogle} size="4x" />
-    </Wrapper>
+      <Wizard onClick={toogleOptions} size="4x" />
+    </MainWrapper>
   );
 };
