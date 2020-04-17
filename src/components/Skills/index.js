@@ -1,4 +1,5 @@
-import React from 'react';
+/* eslint-disable react/no-array-index-key */
+import React, { Fragment } from 'react';
 import styled from 'styled-components';
 import { Row, Column, SectionTitle, SectionBox } from '../Layout';
 import Chip from '../Chip';
@@ -22,18 +23,18 @@ export default () => (
     </Row>
     <SectionBox>
       <Column>
-        {data.skills.map(({ title, additionalInfo }) => (
-          <>
+        {data.skills.map(({ title, additionalInfo, i }) => (
+          <Fragment key={i}>
             <TitleRow>
               <p>{title}</p>
             </TitleRow>
 
             <ChipsRow>
-              {additionalInfo.map((info) => (
-                <Chip>{info}</Chip>
+              {additionalInfo.map((info, j) => (
+                <Chip key={j}>{info}</Chip>
               ))}
             </ChipsRow>
-          </>
+          </Fragment>
         ))}
       </Column>
     </SectionBox>

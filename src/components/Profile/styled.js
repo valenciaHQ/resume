@@ -40,7 +40,8 @@ export const StyledColumn = styled(Column)`
 `;
 
 export const CopiedText = styled(Column)`
-  margin-left: 5px;
+  margin-left: 20px;
+  justify-content: center;
   font-size: ${(props) => props.theme.fontSizes.small};
   color: ${(props) => props.theme.primaryColor};
 `;

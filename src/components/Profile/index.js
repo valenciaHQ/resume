@@ -1,14 +1,16 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import moment from 'moment';
 
 import { Column, Row } from '../Layout';
 import { Age, Email, Phone, Copy } from '../Icons';
 import { Wrapper, Section, Footer, Name, NameRow, StyledColumn, CopiedText } from './styled';
 import SocialRow from '../SocialRow';
+import { HELLO, AGE, EMAIL, PHONE, COPIED } from '../../constants';
 
 const photo = require('../../assets/image/cv_photo.jpg');
 
 export default () => {
+  const [copied, setCopied] = useState(false);
   const mailRef = useRef();
 
   const handleCopy = () => {
@@ -18,6 +20,7 @@ export default () => {
     el.select();
     document.execCommand('copy');
     document.body.removeChild(el);
+    setCopied(true);
   };
 
   return (
@@ -31,7 +34,7 @@ export default () => {
             <Column>
               <NameRow>
                 <Column>
-                  <p>HOLA! SOY</p>
+                  <p>{HELLO}</p>
                 </Column>
                 <Column>
                   <Name>ALEJANDRO VALENCIA</Name>
@@ -57,9 +60,9 @@ export default () => {
                   </Row>
                 </StyledColumn>
                 <StyledColumn marginRight="40px">
-                  <Row>Edad</Row>
-                  <Row>Email</Row>
-                  <Row>Celular</Row>
+                  <Row>{AGE}</Row>
+                  <Row>{EMAIL}</Row>
+                  <Row>{PHONE}</Row>
                 </StyledColumn>
                 <StyledColumn>
                   <Row>{moment().diff('1989-08-22', 'years')}</Row>
@@ -68,7 +71,7 @@ export default () => {
                     <Column style={{ marginLeft: '5px' }}>
                       <Copy onClick={handleCopy} />
                     </Column>
-                    <CopiedText>Copiado!</CopiedText>
+                    {copied && <CopiedText>{`${COPIED}!`}</CopiedText>}
                   </Row>
                   <Row>+ 5411 40317830</Row>
                 </StyledColumn>
