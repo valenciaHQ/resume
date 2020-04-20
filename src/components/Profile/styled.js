@@ -1,18 +1,34 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { Row, Column } from '../Layout';
 
 export const Wrapper = styled.div`
   position: relative;
   top: 200px;
-  left: 20%;
-  height: 400px;
-  width: 60%;
   background-color: white;
   box-shadow: 0px 14px 20px 0px rgba(0, 0, 0, 0.75);
+
+  ${({ mobile }) =>
+    mobile &&
+    css`
+      display: flex;
+      position: static;
+      margin: 30px 0px 10px 0px;
+      font-size: small;
+    `}
 `;
 
 export const Section = styled(Row)`
   padding: 20px;
+`;
+
+export const Image = styled.img`
+  width: 250px;
+
+  ${({ mobile }) =>
+    mobile &&
+    css`
+      width: 100px;
+    `}
 `;
 
 export const Footer = styled(Row)`
@@ -35,8 +51,15 @@ export const Name = styled.p`
 `;
 
 export const StyledColumn = styled(Column)`
-  margin-right: ${(props) => (props.marginRight ? props.marginRight : 'auto')};
+  margin-right: ${(props) => (props.marginRight ? props.marginRight : '0px')};
   justify-content: space-around;
+  ${({ mobile }) =>
+    mobile &&
+    css`
+      flex: 1;
+      align-items: center;
+      padding: 30px 10px;
+    `}
 `;
 
 export const CopiedText = styled(Column)`

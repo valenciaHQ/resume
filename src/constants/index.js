@@ -10,6 +10,7 @@ export const GITHUB_REPOSITORY = 'https://github.com/valenciaHQ/Resume';
 
 export const HELLO = 'Hola! soy';
 export const AGE = 'Edad';
+export const YEARS = 'Años';
 export const EMAIL = 'Email';
 export const PHONE = 'Celular';
 export const COPIED = 'Copiado';

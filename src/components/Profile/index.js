@@ -1,15 +1,17 @@
 import React, { useRef, useState } from 'react';
 import moment from 'moment';
+import { useMediaQuery } from 'react-responsive';
 
 import { Column, Row } from '../Layout';
 import { Age, Email, Phone, Copy } from '../Icons';
-import { Wrapper, Section, Footer, Name, NameRow, StyledColumn, CopiedText } from './styled';
+import { Wrapper, Section, Footer, Name, NameRow, StyledColumn, CopiedText, Image } from './styled';
 import SocialRow from '../SocialRow';
-import { HELLO, AGE, EMAIL, PHONE, COPIED } from '../../constants';
+import { HELLO, AGE, EMAIL, PHONE, COPIED, YEARS } from '../../constants';
 
 const photo = require('../../assets/image/cv_photo.jpg');
 
 export default () => {
+  const isDesktopOrLaptop = useMediaQuery({ minDeviceWidth: 1224 });
   const [copied, setCopied] = useState(false);
   const mailRef = useRef();
 
@@ -23,11 +25,11 @@ export default () => {
     setCopied(true);
   };
 
-  return (
+  return isDesktopOrLaptop ? (
     <Wrapper>
       <Row>
         <Column>
-          <img src={photo} width="250px" alt="cv_photo" />
+          <Image src={photo} alt="cv_photo" />
         </Column>
         <Column style={{ flex: 1 }}>
           <Section style={{ borderBottom: '1px solid lightgray' }}>
@@ -83,6 +85,19 @@ export default () => {
           </Footer>
         </Column>
       </Row>
+    </Wrapper>
+  ) : (
+    <Wrapper mobile>
+      <Column>
+        <Image src={photo} alt="cv_photo" mobile />
+      </Column>
+      <StyledColumn mobile>
+        <Row>
+          <Column ref={mailRef}>alejandro.d.valencia@gmail.com</Column>
+        </Row>
+        <Row>{`${moment().diff('1989-08-22', 'years')} ${YEARS}`}</Row>
+        <Row>+ 5411 40317830</Row>
+      </StyledColumn>
     </Wrapper>
   );
 };

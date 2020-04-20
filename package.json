@@ -16,6 +16,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-event-timeline": "^1.6.3",
+    "react-responsive": "^8.0.3",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.1",
     "react-toastify": "^5.5.0",

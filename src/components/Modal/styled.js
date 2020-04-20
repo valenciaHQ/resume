@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { Row } from '../Layout';
 
 export const StyledRow = styled(Row)`
@@ -37,13 +37,22 @@ export const ModalWrapper = styled.div`
 `;
 
 export const ModalCard = styled.div`
-  position: relative;
-  min-width: 500px;
   z-index: 10;
-  margin-bottom: 100px;
   background: white;
   border-radius: 5px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+
+  ${({ isDesktopOrLaptop }) =>
+    isDesktopOrLaptop &&
+    css`
+      position: relative;
+      min-width: 500px;
+      z-index: 10;
+      margin-bottom: 100px;
+      background: white;
+      border-radius: 5px;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    `}
 `;
 export const CloseButton = styled.button`
   position: absolute;

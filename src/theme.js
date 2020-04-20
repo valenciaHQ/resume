@@ -22,8 +22,8 @@ const theme = {
     xLarge: '2rem'
   },
   measures: {
-    mainPadding: '0px 100px',
-    headerHeight: '45%'
+    desktopPadding: '0px 100px',
+    mobilePadding: '0px 25px'
   }
 };
 

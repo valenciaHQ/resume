@@ -17,7 +17,7 @@ export const SectionTitle = styled.h3`
 `;
 
 export const SectionBox = styled(Row)`
-  width: 70%;
+  width: ${(props) => props.isDesktopOrLaptop && '70%'};
   justify-content: center;
   padding: 20px;
   box-shadow: 0px 3px 10px -2px rgba(0, 0, 0, 0.75);

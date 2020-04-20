@@ -1,5 +1,6 @@
 import React, { useState, useContext } from 'react';
 import Tooltip from 'rc-tooltip';
+import { useMediaQuery } from 'react-responsive';
 import 'rc-tooltip/assets/bootstrap.css';
 
 import { Wizard, Code, English, Spanish, Light } from '../Icons';
@@ -16,6 +17,7 @@ import { MainWrapper, CodeWrapper, EnglishWrapper, SpanishWrapper, CommentWrappe
 import ModalContext from '../../ModalContext';
 
 export default () => {
+  const isDesktopOrLaptop = useMediaQuery({ minDeviceWidth: 1224 });
   const [showChilds, setShowChilds] = useState(false);
   const { toogleModal } = useContext(ModalContext);
 
@@ -30,7 +32,10 @@ export default () => {
             arrowContent={<div className="rc-tooltip-arrow-inner" />}
           >
             <CodeWrapper>
-              <Code onClick={() => window.open(GITHUB_REPOSITORY)} size="2x" />
+              <Code
+                onClick={() => window.open(GITHUB_REPOSITORY)}
+                size={isDesktopOrLaptop && '2x'}
+              />
             </CodeWrapper>
           </Tooltip>
           <Tooltip
@@ -52,17 +57,17 @@ export default () => {
             </SpanishWrapper>
           </Tooltip>
           <Tooltip
-            placement="left"
+            placement="bottom"
             overlay={<span>{SEND_COMMENT}</span>}
             arrowContent={<div className="rc-tooltip-arrow-inner" />}
           >
             <CommentWrapper>
-              <Light size="2x" onClick={toogleModal} />
+              <Light size={isDesktopOrLaptop && '2x'} onClick={toogleModal} />
             </CommentWrapper>
           </Tooltip>
         </>
       )}
-      <Wizard onClick={toogleOptions} size="4x" />
+      <Wizard onClick={toogleOptions} size={isDesktopOrLaptop && '4x'} />
     </MainWrapper>
   );
 };

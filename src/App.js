@@ -1,6 +1,8 @@
+/* eslint-disable no-confusing-arrow */
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { toast, ToastContainer } from 'react-toastify';
+import { useMediaQuery } from 'react-responsive';
 
 import Header from './components/Header';
 import Skills from './components/Skills';
@@ -27,12 +29,17 @@ const Section = styled(Row)`
 
 const Body = styled(Column)`
   flex: 1;
-  margin-top: 200px;
+  margin-top: ${(props) => props.isDesktopOrLaptop && '200px'};
   justify-content: center;
-  padding: ${(props) => props.theme.measures.mainPadding};
+  padding: ${(props) =>
+    props.isDesktopOrLaptop
+      ? props.theme.measures.desktopPadding
+      : props.theme.measures.mobilePadding};
 `;
 
 export default () => {
+  const isDesktopOrLaptop = useMediaQuery({ minDeviceWidth: 1224 });
+
   const [modal, setModal] = useState(false);
   const toogleModal = () => setModal(!modal);
 
@@ -52,7 +59,7 @@ export default () => {
       <ToastContext.Provider value={{ showToast: showNotification }}>
         <Container>
           <Header />
-          <Body>
+          <Body isDesktopOrLaptop={isDesktopOrLaptop}>
             <Section>
               <Skills />
             </Section>

@@ -1,6 +1,8 @@
 import React, { useContext } from 'react';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
+import { useMediaQuery } from 'react-responsive';
+
 import { Column } from '../Layout';
 
 import firestore from '../../firestore';
@@ -35,6 +37,7 @@ const schema = Yup.object().shape({
 });
 
 export default ({ show, onClose }) => {
+  const isDesktopOrLaptop = useMediaQuery({ minDeviceWidth: 1224 });
   const { showToast } = useContext(ToastContext);
 
   const onSubmit = (message) => {
@@ -51,7 +54,7 @@ export default ({ show, onClose }) => {
   }
   return (
     <ModalWrapper>
-      <ModalCard>
+      <ModalCard isDesktopOrLaptop={isDesktopOrLaptop}>
         <CloseButton>
           <Close onClick={onClose} size="2x" />
         </CloseButton>
