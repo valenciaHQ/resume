@@ -13,4 +13,11 @@ Feel free to send me any comments, suggestion, ideas through the app or direct t
 - Responsiveness
 - Internacionalization
 
+## I used:
+
+* React hooks
+* Styled components
+* Firebase firestore and hosting
+* Some ui helper library
+
 **Thanks!**
