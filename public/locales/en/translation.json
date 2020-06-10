@@ -66,8 +66,14 @@
         "location": "Ramos Mejia, GBA"
       },
       {
+        "range": "October 2016 to February 2018",
+        "title": "Java full stack developer - at CANDOIT",
+        "description": "Working on technical solutions for different systems; such as web systems under J2EE and Oracle platforms. Using frameworks as Struts, Spring MVC, Spring Data JPA and Hibernate among others. Working on real state and assurance business projects.",
+        "location": "Ramos Mejia, GBA"
+      },
+      {
         "range": "October 2015 to October 2016",
-        "title": "Java Developer and Oracle PL SQL developer atnGrupo Mercel S.A",
+        "title": "Java Developer and Oracle PL SQL developer at Grupo Mercel S.A",
         "description": "As Fullstack Java/Oracle developer, i made technical analysis of solutions to requirements made by users of different systems developed/maintained for PAMI. I also did development of web systems under J2EE and Oracle platforms, including systems unit tests. Research and implementation of different technologies such as Hibernate, ZK, Spring core, Spring boot, IBatis, MyBatis on multiple systems. Using GIT and SVN for version control, Junit for testing.",
         "location": "Balvanera, CABA"
       },
