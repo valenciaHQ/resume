@@ -74,7 +74,7 @@ export default () => {
                     <Column style={{ marginLeft: '5px' }}>
                       <Copy onClick={handleCopy} />
                     </Column>
-                    {copied && <CopiedText>{`${t('COPIED')}!`}</CopiedText>}
+                    {copied && <CopiedText>{`${t('copied')}!`}</CopiedText>}
                   </Row>
                   <Row>+ 5411 40317830</Row>
                 </StyledColumn>

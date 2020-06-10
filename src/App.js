@@ -8,7 +8,6 @@ import Skills from './components/Skills';
 import Experience from './components/Experience';
 import Education from './components/Education';
 import Footer from './components/Footer';
-import FloatingButton from './components/FloatingButton';
 
 import { Column, Row } from './components/Layout';
 
@@ -51,7 +50,6 @@ export default () => {
         </Section>
       </Body>
       <Footer />
-      <FloatingButton />
     </Container>
   );
 };
