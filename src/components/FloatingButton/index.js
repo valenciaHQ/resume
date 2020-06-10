@@ -1,19 +1,17 @@
-import React, { useState, useContext } from 'react';
+import React, { useState } from 'react';
 import Tooltip from 'rc-tooltip';
 import { useMediaQuery } from 'react-responsive';
 import { useTranslation } from 'react-i18next';
 import 'rc-tooltip/assets/bootstrap.css';
 
-import { Code, English, Spanish, Light, Cogs } from '../Icons';
+import { Code, English, Spanish, Cogs } from '../Icons';
 
-import { MainWrapper, CodeWrapper, EnglishWrapper, SpanishWrapper, CommentWrapper } from './styled';
-import ModalContext from '../../ModalContext';
+import { MainWrapper, CodeWrapper, EnglishWrapper, SpanishWrapper } from './styled';
 import { GITHUB_REPOSITORY } from '../../constants';
 
 export default () => {
   const isDesktopOrLaptop = useMediaQuery({ minDeviceWidth: 1224 });
-  const [showChilds, setShowChilds] = useState(true);
-  const { toogleModal } = useContext(ModalContext);
+  const [showChilds, setShowChilds] = useState(isDesktopOrLaptop);
   const { i18n, t } = useTranslation();
 
   const toogleOptions = () => setShowChilds(!showChilds);
@@ -43,6 +41,7 @@ export default () => {
                 onClick={() => {
                   i18n.changeLanguage('en');
                 }}
+                size={isDesktopOrLaptop && '2x'}
               />
             </EnglishWrapper>
           </Tooltip>
@@ -56,21 +55,13 @@ export default () => {
                 onClick={() => {
                   i18n.changeLanguage('es');
                 }}
+                size={isDesktopOrLaptop && '2x'}
               />
             </SpanishWrapper>
           </Tooltip>
-          <Tooltip
-            placement="bottom"
-            overlay={<span>{t('send_comment')}</span>}
-            arrowContent={<div className="rc-tooltip-arrow-inner" />}
-          >
-            <CommentWrapper>
-              <Light size={isDesktopOrLaptop && '2x'} onClick={toogleModal} />
-            </CommentWrapper>
-          </Tooltip>
         </>
       )}
-      <Cogs onClick={toogleOptions} size={isDesktopOrLaptop && '4x'} />
+      <Cogs onClick={toogleOptions} size={isDesktopOrLaptop ? '4x' : '2x'} />
     </MainWrapper>
   );
 };

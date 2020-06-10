@@ -1,7 +1,6 @@
 /* eslint-disable no-confusing-arrow */
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import { toast, ToastContainer } from 'react-toastify';
 import { useMediaQuery } from 'react-responsive';
 
 import Header from './components/Header';
@@ -12,9 +11,6 @@ import Footer from './components/Footer';
 import FloatingButton from './components/FloatingButton';
 
 import { Column, Row } from './components/Layout';
-import Modal from './components/Modal';
-import ModalContext from './ModalContext';
-import ToastContext from './ToastContext';
 
 const Container = styled.div`
   display: flex;
@@ -38,54 +34,24 @@ const Body = styled(Column)`
 `;
 
 export default () => {
-  const isDesktopOrLaptop = useMediaQuery({ minDeviceWidth: 1224 });
-
-  const [modal, setModal] = useState(false);
-  const toogleModal = () => setModal(!modal);
-
-  const showNotification = (message) => {
-    toast(message, {
-      position: 'bottom-center',
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true
-    });
-  };
+  const isDesktopOrLaptop = useMediaQuery({ minDeviceWidth: 1024 });
 
   return (
-    <ModalContext.Provider value={{ value: modal, toogleModal }}>
-      <ToastContext.Provider value={{ showToast: showNotification }}>
-        <Container>
-          <Header />
-          <Body isDesktopOrLaptop={isDesktopOrLaptop}>
-            <Section>
-              <Skills />
-            </Section>
-            <Section>
-              <Experience />
-            </Section>
-            <Section>
-              <Education />
-            </Section>
-          </Body>
-          <Footer />
-          <FloatingButton />
-          <ModalContext.Consumer>
-            {({ value }) => <Modal show={value} onClose={toogleModal} />}
-          </ModalContext.Consumer>
-          <ToastContainer
-            position="bottom-center"
-            autoClose={5000}
-            hideProgressBar={false}
-            newestOnTop={false}
-            closeOnClick
-            rtl={false}
-            pauseOnVisibilityChange
-          />
-        </Container>
-      </ToastContext.Provider>
-    </ModalContext.Provider>
+    <Container>
+      <Header />
+      <Body isDesktopOrLaptop={isDesktopOrLaptop}>
+        <Section>
+          <Skills />
+        </Section>
+        <Section>
+          <Experience />
+        </Section>
+        <Section>
+          <Education />
+        </Section>
+      </Body>
+      <Footer />
+      <FloatingButton />
+    </Container>
   );
 };

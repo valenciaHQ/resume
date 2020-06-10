@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { DEVICE } from '../../constants';
 
 export const IconWrapper = styled.div`
   position: fixed;
@@ -6,26 +7,58 @@ export const IconWrapper = styled.div`
 `;
 
 export const CodeWrapper = styled(IconWrapper)`
-  right: 100px;
-  top: 55%;
-`;
+  @media ${DEVICE.mobileS} {
+    right: 5%;
+    top: 55%;
+  }
+  @media ${DEVICE.tablet} {
+    right: 5%;
+    top: 56%;
+  }
 
-export const SpanishWrapper = styled(IconWrapper)`
-  right: 90px;
-  top: 47%;
+  @media ${DEVICE.laptop} {
+    top: 58%;
+  }
+
+  @media ${DEVICE.laptopL} {
+    top: 60%;
+  }
 `;
 
 export const EnglishWrapper = styled(IconWrapper)`
-  right: 50px;
-  top: 40%;
+  @media ${DEVICE.mobileS} {
+    right: 15%;
+    top: 46%;
+  }
+  @media ${DEVICE.tablet} {
+    right: 5%;
+  }
+
+  @media ${DEVICE.laptop} {
+    top: 45%;
+  }
+
+  @media ${DEVICE.laptopL} {
+    top: 46%;
+  }
 `;
 
-export const CommentWrapper = styled(IconWrapper)`
-  right: 50px;
-  top: 65%;
+export const SpanishWrapper = styled(IconWrapper)`
+  @media ${DEVICE.mobileS} {
+    right: 3%;
+    top: 43%;
+  }
+  @media ${DEVICE.tablet} {
+    right: 9%;
+    top: 51%;
+  }
+
+  @media ${DEVICE.laptopL} {
+    top: 53%;
+  }
 `;
 
 export const MainWrapper = styled(IconWrapper)`
-  right: 10px;
+  right: 2%;
   top: 50%;
 `;
