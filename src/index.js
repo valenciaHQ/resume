@@ -1,15 +1,18 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
 
 import * as serviceWorker from './serviceWorker';
 import App from './App';
 import Theme from './theme';
 
+import './i18n';
 import './style.css';
 
 ReactDOM.render(
   <Theme>
-    <App />
+    <Suspense fallback={null}>
+      <App />
+    </Suspense>
   </Theme>,
   document.getElementById('root')
 );

@@ -15,10 +15,10 @@ import {
   faMobileAlt,
   faUserClock,
   faCopy,
-  faHatWizard,
   faCode,
   faLightbulb,
-  faTimesCircle
+  faTimesCircle,
+  faCogs
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styled, { css } from 'styled-components';
@@ -54,9 +54,9 @@ export const Code = ({ size, onClick }) => (
   </Wrapper>
 );
 
-export const Wizard = ({ size, onClick }) => (
-  <Wrapper onClick={onClick}>
-    <FontAwesomeIcon icon={faHatWizard} size={size} />
+export const Cogs = ({ size, onClick }) => (
+  <Wrapper onClick={onClick} style={{ color: 'palevioletred' }}>
+    <FontAwesomeIcon icon={faCogs} size={size} />
   </Wrapper>
 );
 

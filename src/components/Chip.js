@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export default styled.div`
   display: inline-block;
@@ -10,4 +10,10 @@ export default styled.div`
   color: white;
   background-color: ${(props) => props.theme.primaryColor};
   margin: 8px;
+
+  ${({ english }) =>
+    english &&
+    css`
+      background-color: palevioletred;
+    `};
 `;

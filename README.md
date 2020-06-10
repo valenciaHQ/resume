@@ -8,16 +8,12 @@ If you want to run, you have to provide your own firebase sconfiguration keys.
 
 Feel free to send me any comments, suggestion, ideas through the app or direct to **alejandro.d.valencia@gmail.com**
 
-## Comming soon:
-
-- Responsiveness
-- Internacionalization
-
 ## I used:
 
-* React hooks
-* Styled components
-* Firebase firestore and hosting
-* Some ui helper library
+- React hooks
+- 18next
+- Styled components
+- Firebase firestore and hosting
+- Some ui helper library
 
 **Thanks!**

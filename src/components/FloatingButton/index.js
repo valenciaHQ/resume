@@ -1,25 +1,20 @@
 import React, { useState, useContext } from 'react';
 import Tooltip from 'rc-tooltip';
 import { useMediaQuery } from 'react-responsive';
+import { useTranslation } from 'react-i18next';
 import 'rc-tooltip/assets/bootstrap.css';
 
-import { Wizard, Code, English, Spanish, Light } from '../Icons';
+import { Code, English, Spanish, Light, Cogs } from '../Icons';
 
-import {
-  GITHUB_REPOSITORY,
-  VIEW_ENGLISH,
-  COMMING_SOON,
-  VIEW_CODE,
-  VIEW_SPANISH,
-  SEND_COMMENT
-} from '../../constants';
 import { MainWrapper, CodeWrapper, EnglishWrapper, SpanishWrapper, CommentWrapper } from './styled';
 import ModalContext from '../../ModalContext';
+import { GITHUB_REPOSITORY } from '../../constants';
 
 export default () => {
   const isDesktopOrLaptop = useMediaQuery({ minDeviceWidth: 1224 });
-  const [showChilds, setShowChilds] = useState(false);
+  const [showChilds, setShowChilds] = useState(true);
   const { toogleModal } = useContext(ModalContext);
+  const { i18n, t } = useTranslation();
 
   const toogleOptions = () => setShowChilds(!showChilds);
   return (
@@ -28,7 +23,7 @@ export default () => {
         <>
           <Tooltip
             placement="left"
-            overlay={<span>{VIEW_CODE}</span>}
+            overlay={<span>{t('view_code')}</span>}
             arrowContent={<div className="rc-tooltip-arrow-inner" />}
           >
             <CodeWrapper>
@@ -40,25 +35,33 @@ export default () => {
           </Tooltip>
           <Tooltip
             placement="top"
-            overlay={<span>{`${VIEW_ENGLISH} (${COMMING_SOON.toLowerCase()})`}</span>}
+            overlay={<span>{`${t('view_english')}`}</span>}
             arrowContent={<div className="rc-tooltip-arrow-inner" />}
           >
             <EnglishWrapper>
-              <English disabled />
+              <English
+                onClick={() => {
+                  i18n.changeLanguage('en');
+                }}
+              />
             </EnglishWrapper>
           </Tooltip>
           <Tooltip
             placement="left"
-            overlay={<span>{VIEW_SPANISH}</span>}
+            overlay={<span>{`${t('view_spanish')}`}</span>}
             arrowContent={<div className="rc-tooltip-arrow-inner" />}
           >
             <SpanishWrapper>
-              <Spanish />
+              <Spanish
+                onClick={() => {
+                  i18n.changeLanguage('es');
+                }}
+              />
             </SpanishWrapper>
           </Tooltip>
           <Tooltip
             placement="bottom"
-            overlay={<span>{SEND_COMMENT}</span>}
+            overlay={<span>{t('send_comment')}</span>}
             arrowContent={<div className="rc-tooltip-arrow-inner" />}
           >
             <CommentWrapper>
@@ -67,7 +70,7 @@ export default () => {
           </Tooltip>
         </>
       )}
-      <Wizard onClick={toogleOptions} size={isDesktopOrLaptop && '4x'} />
+      <Cogs onClick={toogleOptions} size={isDesktopOrLaptop && '4x'} />
     </MainWrapper>
   );
 };

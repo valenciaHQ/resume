@@ -1,12 +1,12 @@
 import React, { useRef, useState } from 'react';
 import moment from 'moment';
 import { useMediaQuery } from 'react-responsive';
+import { useTranslation } from 'react-i18next';
 
 import { Column, Row } from '../Layout';
 import { Age, Email, Phone, Copy } from '../Icons';
 import { Wrapper, Section, Footer, Name, NameRow, StyledColumn, CopiedText, Image } from './styled';
 import SocialRow from '../SocialRow';
-import { HELLO, AGE, EMAIL, PHONE, COPIED, YEARS } from '../../constants';
 
 const photo = require('../../assets/image/cv_photo.jpg');
 
@@ -14,6 +14,7 @@ export default () => {
   const isDesktopOrLaptop = useMediaQuery({ minDeviceWidth: 1224 });
   const [copied, setCopied] = useState(false);
   const mailRef = useRef();
+  const { t } = useTranslation();
 
   const handleCopy = () => {
     const el = document.createElement('textarea');
@@ -36,7 +37,7 @@ export default () => {
             <Column>
               <NameRow>
                 <Column>
-                  <p>{HELLO}</p>
+                  <p>{t('hello')}</p>
                 </Column>
                 <Column>
                   <Name>ALEJANDRO VALENCIA</Name>
@@ -62,9 +63,9 @@ export default () => {
                   </Row>
                 </StyledColumn>
                 <StyledColumn marginRight="40px">
-                  <Row>{AGE}</Row>
-                  <Row>{EMAIL}</Row>
-                  <Row>{PHONE}</Row>
+                  <Row>{t('age')}</Row>
+                  <Row>{t('email')}</Row>
+                  <Row>{t('phone')}</Row>
                 </StyledColumn>
                 <StyledColumn>
                   <Row>{moment().diff('1989-08-22', 'years')}</Row>
@@ -73,7 +74,7 @@ export default () => {
                     <Column style={{ marginLeft: '5px' }}>
                       <Copy onClick={handleCopy} />
                     </Column>
-                    {copied && <CopiedText>{`${COPIED}!`}</CopiedText>}
+                    {copied && <CopiedText>{`${t('COPIED')}!`}</CopiedText>}
                   </Row>
                   <Row>+ 5411 40317830</Row>
                 </StyledColumn>
@@ -95,7 +96,7 @@ export default () => {
         <Row>
           <Column ref={mailRef}>alejandro.d.valencia@gmail.com</Column>
         </Row>
-        <Row>{`${moment().diff('1989-08-22', 'years')} ${YEARS}`}</Row>
+        <Row>{`${moment().diff('1989-08-22', 'years')} ${t('years')}`}</Row>
         <Row>+ 5411 40317830</Row>
       </StyledColumn>
     </Wrapper>

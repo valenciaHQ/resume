@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 import { useMediaQuery } from 'react-responsive';
+import { useTranslation } from 'react-i18next';
 
 import { Column } from '../Layout';
 
@@ -20,25 +21,18 @@ import {
   Error
 } from './styled';
 import { Close } from '../Icons';
-import {
-  FIREBASE_COLLECTION,
-  REQUIRED,
-  TOO_SHORT,
-  SEND,
-  VALID_MAIL,
-  SUCCESS_MESSAGE,
-  ERROR_MESSAGE
-} from '../../constants';
+import { FIREBASE_COLLECTION, SUCCESS_MESSAGE, ERROR_MESSAGE } from '../../constants';
 import ToastContext from '../../ToastContext';
-
-const schema = Yup.object().shape({
-  email: Yup.string().email(VALID_MAIL).required(REQUIRED),
-  comment: Yup.string().min(10, TOO_SHORT).required(REQUIRED)
-});
 
 export default ({ show, onClose }) => {
   const isDesktopOrLaptop = useMediaQuery({ minDeviceWidth: 1224 });
   const { showToast } = useContext(ToastContext);
+  const { t } = useTranslation();
+
+  const schema = Yup.object().shape({
+    email: Yup.string().email(t('valid_mail')).required(t('required')),
+    comment: Yup.string().min(10, t('too_short')).required(t('required'))
+  });
 
   const onSubmit = (message) => {
     firestore
@@ -87,7 +81,7 @@ export default ({ show, onClose }) => {
                   </Column>
                 </StyledRow>
                 <StyledRow colorized centered>
-                  <Button type="submit">{SEND}</Button>
+                  <Button type="submit">{t('send')}</Button>
                 </StyledRow>
               </Column>
             </form>

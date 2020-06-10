@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useTranslation } from 'react-i18next';
 import { useMediaQuery } from 'react-responsive';
 
 import { Row, Column, SectionTitle, SectionBox } from '../Layout';
@@ -32,11 +33,12 @@ const ImageWrapper = styled(Column)`
 
 export default () => {
   const isDesktopOrLaptop = useMediaQuery({ minDeviceWidth: 1224 });
+  const { t } = useTranslation();
 
   return (
     <Column style={{ flex: 1, alignItems: 'center' }}>
       <Row>
-        <SectionTitle>Educación</SectionTitle>
+        <SectionTitle>{t('education.title')}</SectionTitle>
       </Row>
       <BoxWrapper isDesktopOrLaptop={isDesktopOrLaptop}>
         <Box style={{ flex: 1, padding: '20px' }}>
@@ -45,11 +47,9 @@ export default () => {
               <Image src={istea} alt="istea" />
             </ImageWrapper>
             <Column>
-              <div style={{ fontWeight: 'bold' }}>
-                Tecnicatura Superior en desarrollo de software
-              </div>
-              <div>ISTEA</div>
-              <div>Finalizada</div>
+              <div style={{ fontWeight: 'bold' }}>{t('education.istea.name')}</div>
+              <div>{t('education.istea.career')}</div>
+              <div>{t('education.istea.status')}</div>
             </Column>
           </EntryRow>
           <EntryRow>
@@ -57,8 +57,8 @@ export default () => {
               <Image src={utn} alt="utn" />
             </ImageWrapper>
             <Column>
-              <div>Desarrollo en Reactjs</div>
-              <div>Extensión Universitaria - UTN Buenos Aires</div>
+              <div>{t('education.utn.name')}</div>
+              <div>{t('education.utn.career')}</div>
             </Column>
           </EntryRow>
           <EntryRow>
@@ -66,7 +66,7 @@ export default () => {
               <Image src={udemy} alt="udemy" />
             </ImageWrapper>
             <Column>
-              <div>Complete CSS Flexbox guide</div>
+              <div>{t('education.udemy_flex')}</div>
             </Column>
           </EntryRow>
           <EntryRow>
@@ -74,7 +74,7 @@ export default () => {
               <Image src={udemy} alt="udemy" />
             </ImageWrapper>
             <Column>
-              <div>Creative CSS Animations, Transitions And Transforms Course</div>
+              <div>{t('education.udemy_css')}</div>
             </Column>
           </EntryRow>
         </Box>
