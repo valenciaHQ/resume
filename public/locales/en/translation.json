@@ -8,16 +8,23 @@
   "skills": {
     "title": "Skills",
     "items": [
-      {
+     {
         "title": "Javascript",
         "additionalInfo": [
           "React",
           "es6",
           "Hooks",
+          "Redux",
+          "Redux toolkit",
+          "Context API"
+        ]
+      },
+      {
+        "title": "Css",
+        "additionalInfo": [
+          "Css",
           "Styled components",
-          "State management",
-          "Context API",
-          "Firebase - React"
+          "Responsive design - Css grid - Flexbox"
         ]
       },
       {
@@ -25,9 +32,8 @@
         "additionalInfo": ["Spring", "Jpa", "Jersey", "Swagger", "Spring mongoDB", "Hibernate"]
       },
       {
-        "title": "And more...",
+        "title": "Y más...",
         "additionalInfo": [
-          "CSS",
           "Html",
           "JSX",
           "Git",
@@ -47,8 +53,14 @@
   "experience": {
     "title": "Professional experience",
     "items": [
+       {
+        "range": "August 2020 - Presente",
+        "title": "Sr Software Engineer",
+        "description": "I'm part of the Checks Program. I'm part of a squad of tech leads of new microsites within the new platform for enterprises developed in React js, involved in user experience design, development, testing and helping/coaching colleagues in their learning path into new technologies. We use: hooks, typescript, styled components, test (jest/enzyme) /coverage > 60%, responsive design with flexbox.",
+        "location": "Remote"
+      },
       {
-        "range": "September 2019 - Present",
+        "range": "September 2019 - August 2020",
         "title": "React Developer at Park Assist",
         "description": "Working on the next gen of parking administration platform. Realtime parking management platform. Using React (functional components mainly), styled components and AWS Amplify features such as: Auth, PubSub and Amazon services from console (Iot Core, Iam, S3, etc).",
         "location": "Palermo, CABA"

@@ -14,10 +14,17 @@
           "React",
           "es6",
           "Hooks",
+          "Redux",
+          "Redux toolkit",
+          "Context API"
+        ]
+      },
+      {
+        "title": "Css",
+        "additionalInfo": [
+          "Css",
           "Styled components",
-          "State management",
-          "Context API",
-          "Firebase - React"
+          "Responsive design - Css grid - Flexbox"
         ]
       },
       {
@@ -40,15 +47,21 @@
       },
       {
         "title": "En progreso!",
-        "additionalInfo": ["Node por Curso UTN - node intermedio", "UX/UI por Coderhouse"]
+        "additionalInfo": ["Epic React dev Career - https://epicreact.dev/learn"]
       }
     ]
   },
   "experience": {
     "title": "Experiencia profesional",
     "items": [
+       {
+        "range": "Agosto 2020 - Presente",
+        "title": "Sr Software Engineer",
+        "description": "Formo parte del programa de cheques. Desempeñándome como referente del nuevo micrositio del programa de descuentos desarrollado en Reactjs, formando parte del diseño de la experiencia de usuario, el desarrollo y el acompañamiento de colegas en el aprendizaje de las nuevas tecnologías. Usamos: hooks, typescript, styled components, test (jest/enzyme) /coverage > 60%, responsive design con flexbox.",
+        "location": "Remoto"
+      },
       {
-        "range": "Septiembre 2019 - Presente",
+        "range": "Septiembre 2019 - Agosto 2020",
         "title": "React Developer en Park Assist",
         "description": "Trabajando en INX, producto de gestión de estacionamiento inteligente, utilizando React (Version 16.8+ hooks + React context API) y Amplify para acceder a los Servicios AWS (IAM, Iot core, S3, entre otros)",
         "location": "Palermo, CABA"
