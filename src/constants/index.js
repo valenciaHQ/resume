@@ -8,10 +8,6 @@ export const SOCIAL_NETWORK = {
 
 export const GITHUB_REPOSITORY = 'https://github.com/valenciaHQ/Resume';
 
-export const FIREBASE_COLLECTION = {
-  MESSAGES: 'messages'
-};
-
 export const SUCCESS_MESSAGE = 'Mensaje enviado.';
 export const ERROR_MESSAGE = 'Hubo un error enviando el mensaje';
 
