@@ -16,16 +16,17 @@
           "Hooks",
           "Redux",
           "Redux toolkit",
-          "Context API"
+          "Context API",
+          "Typescript",
+          "Webpack",
+          "Jest",
+          "Enzyme",
+          "React testing library"
         ]
       },
       {
         "title": "Css",
-        "additionalInfo": [
-          "Css",
-          "Styled components",
-          "Responsive design - Css grid - Flexbox"
-        ]
+        "additionalInfo": ["Css", "Styled components", "Responsive design - Css grid - Flexbox"]
       },
       {
         "title": "Java",
@@ -36,7 +37,6 @@
         "additionalInfo": [
           "CSS",
           "Html",
-          "JSX",
           "Git",
           "Sql db",
           "Nosql db",
@@ -54,7 +54,7 @@
   "experience": {
     "title": "Experiencia profesional",
     "items": [
-       {
+      {
         "range": "Agosto 2020 - Presente",
         "title": "Sr Software Engineer",
         "description": "Formo parte del programa de cheques. Desempeñándome como referente del nuevo micrositio del programa de descuentos desarrollado en Reactjs, formando parte del diseño de la experiencia de usuario, el desarrollo y el acompañamiento de colegas en el aprendizaje de las nuevas tecnologías. Usamos: hooks, typescript, styled components, test (jest/enzyme) /coverage > 60%, responsive design con flexbox.",
