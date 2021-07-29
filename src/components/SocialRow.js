@@ -2,7 +2,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { GitHub, Twitter, Instagram, StackExchange, Linkedln } from './Icons';
+import { GitHub, Twitter, Instagram, StackOverFlow, Linkedln } from './Icons';
 import { Row, Column } from './Layout';
 import { SOCIAL_NETWORK } from '../constants';
 
@@ -48,7 +48,7 @@ export default ({ width, iconSize, roundedWrapper }) => (
     />
     <Icon
       Component={
-        <StackExchange
+        <StackOverFlow
           size={iconSize}
           onClick={() => window.open(SOCIAL_NETWORK.STACK_EXCHANGE)}
           roundedWrapper={roundedWrapper}

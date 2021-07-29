@@ -4,7 +4,7 @@ import {
   faFacebook,
   faTwitter,
   faLinkedin,
-  faStackExchange,
+  faStackOverflow,
   faInstagram,
   faGithub
 } from '@fortawesome/free-brands-svg-icons';
@@ -102,9 +102,9 @@ export const Instagram = ({ size, onClick }) => (
   </Wrapper>
 );
 
-export const StackExchange = ({ size, onClick }) => (
+export const StackOverFlow = ({ size, onClick }) => (
   <Wrapper onClick={onClick}>
-    <FontAwesomeIcon icon={faStackExchange} size={size} />
+    <FontAwesomeIcon icon={faStackOverflow} size={size} />
   </Wrapper>
 );
 

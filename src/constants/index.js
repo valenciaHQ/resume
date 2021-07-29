@@ -2,7 +2,7 @@ export const SOCIAL_NETWORK = {
   TWITTER: 'https://twitter.com/advarhalla',
   GITHUB: 'https://github.com/valenciaHQ',
   INSTAGRAM: 'https://www.instagram.com/_alevalencia_',
-  STACK_EXCHANGE: 'https://stackexchange.com/users/15654480/valenciahq',
+  STACK_EXCHANGE: 'https://stackoverflow.com/users/11295202/valenciahq',
   LINKEDLN: 'https://www.linkedin.com/in/valenciaalejandro/'
 };
 
