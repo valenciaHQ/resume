@@ -55,13 +55,13 @@
     "title": "Experiencia profesional",
     "items": [
       {
-        "range": "July 2021 - Present",
-        "title": "Frontend Engineer at Genium",
-        "description": "Formo parte del equipo front end de Human Security",
+        "range": "Noviembre 2021 - Presente",
+        "title": "React Lead developer",
+        "description": "Como referente, mi role implica brindar soporte a mis compaleros como desarrollar nuevos productos y servicios. Algunos de los proyectos en los que estoy involucrado son: Pedidos Ya: Credits partner platform (nextjs), Swell Migration CLI (node)",
         "location": "Remoto"
       },
       {
-        "range": "Agosto 2020 - July 2021",
+        "range": "Agosto 2020 - Agosto 2021",
         "title": "Sr Software Engineer at Santander Tecnología",
         "description": "Formo parte del programa de cheques. Desempeñándome como referente del nuevo micrositio del programa de descuentos desarrollado en Reactjs, formando parte del diseño de la experiencia de usuario, el desarrollo y el acompañamiento de colegas en el aprendizaje de las nuevas tecnologías. Usamos: hooks, typescript, nestjs, styled components, test (jest/enzyme) /coverage > 60%, responsive design con flexbox.",
         "location": "Remoto"

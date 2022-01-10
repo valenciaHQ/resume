@@ -12,6 +12,7 @@
         "title": "Javascript",
         "additionalInfo": [
           "React",
+          "Node",
           "es6",
           "Hooks",
           "Redux",
@@ -55,13 +56,13 @@
     "title": "Professional experience",
     "items": [
       {
-        "range": "July 2021 - Present",
-        "title": "Frontend Engineer at Genium",
-        "description": "I'm part of the Frontend engineers staff at Human Security Company",
+        "range": "November 2021 - Present",
+        "title": "React Lead Developer",
+        "description": "As a lead developer, my role implies both bringing support for teammates and developing new products and features. Some of the project's im involved in are Pedidos Ya - Credits Partner Platform (nextjs), Swell Migration CLI (node)",
         "location": "Remoto"
       },
       {
-        "range": "August 2020 - Presente",
+        "range": "August 2020 - August 2021",
         "title": "Sr Software Engineer at Santander Tecnología",
         "description": "I'm part of the Checks Program. I'm part of a squad of tech leads of new microsites within the new platform for enterprises developed in React js, involved in user experience design, development, testing and helping/coaching colleagues in their learning path into new technologies. We use: hooks, typescript, nestjs, styled components, test (jest/enzyme) /coverage > 60%, responsive design with flexbox.",
         "location": "Remote"
