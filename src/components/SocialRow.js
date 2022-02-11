@@ -1,14 +1,14 @@
 /* eslint-disable react/jsx-wrap-multilines */
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-import { GitHub, Twitter, Instagram, StackOverFlow, Linkedln } from './Icons';
-import { Row, Column } from './Layout';
-import { SOCIAL_NETWORK } from '../constants';
+import { GitHub, Twitter, Instagram, StackOverFlow, Linkedln } from "./Icons";
+import { Row, Column } from "./Layout";
+import { SOCIAL_NETWORK } from "../constants";
 
 const Wrapper = styled(Row)`
   flex: 1;
-  width: ${(props) => (props.width ? props.width : 'auto')};
+  width: ${(props) => (props.width ? props.width : "auto")};
   color: ${(props) => props.theme.colors.white};
   justify-content: space-around;
 `;
@@ -17,7 +17,7 @@ const IconWrapper = styled(Column)``;
 
 const Icon = ({ Component }) => <IconWrapper>{Component}</IconWrapper>;
 
-export default ({ width, iconSize, roundedWrapper }) => (
+const SocialRow = ({ width, iconSize, roundedWrapper }) => (
   <Wrapper width={width}>
     <Icon
       Component={
@@ -66,3 +66,5 @@ export default ({ width, iconSize, roundedWrapper }) => (
     />
   </Wrapper>
 );
+
+export default SocialRow;

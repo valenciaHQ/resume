@@ -1,15 +1,14 @@
-/* eslint-disable no-confusing-arrow */
-import React from 'react';
-import styled from 'styled-components';
-import { useMediaQuery } from 'react-responsive';
+import React from "react";
+import styled from "styled-components";
+import { useMediaQuery } from "react-responsive";
 
-import Header from './components/Header';
-import Skills from './components/Skills';
-import Experience from './components/Experience';
-import Education from './components/Education';
-import Footer from './components/Footer';
+import Header from "./Header";
+import Skills from "./Skills";
+import Experience from "./Experience";
+import Education from "./Education";
+import Footer from "./Footer";
 
-import { Column, Row } from './components/Layout';
+import { Column, Row } from "./Layout";
 
 const Container = styled.div`
   display: flex;
@@ -24,15 +23,14 @@ const Section = styled(Row)`
 
 const Body = styled(Column)`
   flex: 1;
-  margin-top: ${(props) => props.isDesktopOrLaptop && '200px'};
+  margin-top: ${(props) => props.isDesktopOrLaptop && "200px"};
   justify-content: center;
   padding: ${(props) =>
     props.isDesktopOrLaptop
       ? props.theme.measures.desktopPadding
       : props.theme.measures.mobilePadding};
 `;
-
-export default () => {
+const App = () => {
   const isDesktopOrLaptop = useMediaQuery({ minDeviceWidth: 1024 });
 
   return (
@@ -53,3 +51,5 @@ export default () => {
     </Container>
   );
 };
+
+export default App;

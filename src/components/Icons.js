@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 import {
   faFacebook,
@@ -6,8 +6,8 @@ import {
   faLinkedin,
   faStackOverflow,
   faInstagram,
-  faGithub
-} from '@fortawesome/free-brands-svg-icons';
+  faGithub,
+} from "@fortawesome/free-brands-svg-icons";
 
 import {
   faBriefcase,
@@ -18,13 +18,10 @@ import {
   faCode,
   faLightbulb,
   faTimesCircle,
-  faCogs
-} from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import styled, { css } from 'styled-components';
-
-const spanishFlagIcon = require('../assets/icons/spain-flag.png');
-const englishFlagIcon = require('../assets/icons/united-kingdom-flag.png');
+  faCogs,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import styled, { css } from "styled-components";
 
 const Wrapper = styled.div`
   ${({ onClick }) =>
@@ -55,7 +52,7 @@ export const Code = ({ size, onClick }) => (
 );
 
 export const Cogs = ({ size, onClick }) => (
-  <Wrapper onClick={onClick} style={{ color: 'palevioletred' }}>
+  <Wrapper onClick={onClick} style={{ color: "palevioletred" }}>
     <FontAwesomeIcon icon={faCogs} size={size} />
   </Wrapper>
 );
@@ -130,16 +127,16 @@ export const English = ({ onClick, disabled }) => (
   <Wrapper onClick={onClick}>
     <input
       type="image"
-      src={englishFlagIcon}
+      src="/icons/united-kingdom-flag.png"
       border="0"
       alt="english"
-      style={disabled && { opacity: '0.2' }}
+      style={disabled && { opacity: "0.2" }}
     />
   </Wrapper>
 );
 
 export const Spanish = ({ onClick }) => (
   <Wrapper onClick={onClick}>
-    <input type="image" src={spanishFlagIcon} border="0" alt="spanish" />
+    <input type="image" src="/icons/spain-flag.png" border="0" alt="spanish" />
   </Wrapper>
 );

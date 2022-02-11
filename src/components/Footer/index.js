@@ -1,8 +1,8 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-import { Row, Column } from '../Layout';
-import SocialRow from '../SocialRow';
+import { Row, Column } from "../Layout";
+import SocialRow from "../SocialRow";
 
 const Wrapper = styled(Column)`
   height: 100px;
@@ -11,10 +11,12 @@ const Wrapper = styled(Column)`
   padding-left: 20px;
 `;
 
-export default () => (
+const Footer = () => (
   <Wrapper>
-    <Row style={{ flex: 1, alignItems: 'center' }}>
+    <Row style={{ flex: 1, alignItems: "center" }}>
       <SocialRow width="300px" iconSize="2x" />
     </Row>
   </Wrapper>
 );
+
+export default Footer;
