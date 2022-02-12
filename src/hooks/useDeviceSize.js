@@ -6,7 +6,7 @@ const useDeviceSize = () => {
   useEffect(() => {
     function handleResize() {
       const width = document.documentElement.clientWidth;
-      if (width < DEVICE_SIZE.laptopL) {
+      if (width < DEVICE_SIZE.laptop) {
         setIsDesktopOrLaptop(false);
       } else {
         setIsDesktopOrLaptop(true);

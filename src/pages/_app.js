@@ -3,13 +3,11 @@ import { appWithTranslation } from "next-i18next";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
-
-body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #04b57b;
-  margin: 0px;
-}
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #04b57b;
+    margin: 0px;
+  }
 `;
 
 const theme = {
