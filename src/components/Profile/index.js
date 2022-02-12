@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import moment from "moment";
-import { useMediaQuery } from "react-responsive";
 import { useTranslation } from "next-i18next";
+import useDeviceSize from "../../hooks/useDeviceSize";
 
 import { Column, Row } from "../Layout";
 import { Age, Email, Phone, Copy } from "../Icons";
@@ -18,7 +18,8 @@ import {
 import SocialRow from "../SocialRow";
 
 const Profile = () => {
-  const isDesktopOrLaptop = useMediaQuery({ minDeviceWidth: 1224 });
+  const { isDesktopOrLaptop } = useDeviceSize();
+
   const [copied, setCopied] = useState(false);
   const mailRef = useRef();
   const { t } = useTranslation();
@@ -51,7 +52,9 @@ const Profile = () => {
                 </Column>
               </NameRow>
               <Row>
-                <p style={{ margin: "0px" }}>Software engineer</p>
+                <p style={{ margin: "0px" }}>
+                  React Developer - Software Developer - Crypto enthusiast
+                </p>
               </Row>
             </Column>
           </Section>

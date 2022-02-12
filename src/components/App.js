@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { useMediaQuery } from "react-responsive";
 
+import useDeviceSize from "../hooks/useDeviceSize";
 import Header from "./Header";
 import Skills from "./Skills";
 import Experience from "./Experience";
@@ -31,7 +31,7 @@ const Body = styled(Column)`
       : props.theme.measures.mobilePadding};
 `;
 const App = () => {
-  const isDesktopOrLaptop = useMediaQuery({ minDeviceWidth: 1024 });
+  const { isDesktopOrLaptop } = useDeviceSize();
 
   return (
     <Container>

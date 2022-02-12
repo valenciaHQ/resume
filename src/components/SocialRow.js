@@ -17,12 +17,12 @@ const IconWrapper = styled(Column)``;
 
 const Icon = ({ Component }) => <IconWrapper>{Component}</IconWrapper>;
 
-const SocialRow = ({ width, iconSize, roundedWrapper }) => (
+const SocialRow = ({ width, isDesktopOrLaptop, roundedWrapper }) => (
   <Wrapper width={width}>
     <Icon
       Component={
         <GitHub
-          size={iconSize}
+          isDesktopOrLaptop={isDesktopOrLaptop}
           onClick={() => window.open(SOCIAL_NETWORK.GITHUB)}
           roundedWrapper={roundedWrapper}
         />
@@ -31,7 +31,7 @@ const SocialRow = ({ width, iconSize, roundedWrapper }) => (
     <Icon
       Component={
         <Twitter
-          size={iconSize}
+          isDesktopOrLaptop={isDesktopOrLaptop}
           onClick={() => window.open(SOCIAL_NETWORK.TWITTER)}
           roundedWrapper={roundedWrapper}
         />
@@ -40,7 +40,7 @@ const SocialRow = ({ width, iconSize, roundedWrapper }) => (
     <Icon
       Component={
         <Instagram
-          size={iconSize}
+          isDesktopOrLaptop={isDesktopOrLaptop}
           onClick={() => window.open(SOCIAL_NETWORK.INSTAGRAM)}
           roundedWrapper={roundedWrapper}
         />
@@ -49,7 +49,7 @@ const SocialRow = ({ width, iconSize, roundedWrapper }) => (
     <Icon
       Component={
         <StackOverFlow
-          size={iconSize}
+          isDesktopOrLaptop={isDesktopOrLaptop}
           onClick={() => window.open(SOCIAL_NETWORK.STACK_EXCHANGE)}
           roundedWrapper={roundedWrapper}
         />
@@ -58,7 +58,7 @@ const SocialRow = ({ width, iconSize, roundedWrapper }) => (
     <Icon
       Component={
         <Linkedln
-          size={iconSize}
+          isDesktopOrLaptop={isDesktopOrLaptop}
           onClick={() => window.open(SOCIAL_NETWORK.LINKEDLN)}
           roundedWrapper={roundedWrapper}
         />

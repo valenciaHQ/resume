@@ -17,7 +17,6 @@ const ChipsRow = styled(Row)`
 
 const Skills = () => {
   const { t, ready } = useTranslation();
-  console.log(ready);
 
   return (
     <Column style={{ flex: 1, alignItems: "center" }}>

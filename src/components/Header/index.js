@@ -1,8 +1,8 @@
 import React from "react";
 import styled, { css } from "styled-components";
-import { useMediaQuery } from "react-responsive";
 import { useTranslation } from "next-i18next";
 
+import useDeviceSize from "../../hooks/useDeviceSize";
 import Profile from "../Profile";
 import SocialRow from "../SocialRow";
 import { Row, Column } from "../Layout";
@@ -80,7 +80,7 @@ const ActionsContainer = styled(Row)`
 `;
 
 const Header = () => {
-  const isDesktopOrLaptop = useMediaQuery({ minDeviceWidth: 1224 });
+  const { isDesktopOrLaptop } = useDeviceSize();
   const { i18n } = useTranslation();
 
   return (
@@ -93,26 +93,22 @@ const Header = () => {
       <NetworkContainer isDesktopOrLaptop={isDesktopOrLaptop}>
         <SocialRow
           width={isDesktopOrLaptop ? "250px" : "150px"}
-          iconSize={isDesktopOrLaptop ? "2x" : null}
+          isDesktopOrLaptop={isDesktopOrLaptop}
           roundedIcons
         />
         <Column>
           <ActionsContainer>
             <Code
               onClick={() => window.open(GITHUB_REPOSITORY)}
-              size={isDesktopOrLaptop && "2x"}
+              isDesktopOrLaptop={isDesktopOrLaptop}
             />
             <English
-              onClick={() => {
-                i18n.changeLanguage("en");
-              }}
-              size={isDesktopOrLaptop && "2x"}
+              onClick={() => i18n.changeLanguage("en")}
+              isDesktopOrLaptop={isDesktopOrLaptop}
             />
             <Spanish
-              onClick={() => {
-                i18n.changeLanguage("es");
-              }}
-              size={isDesktopOrLaptop && "2x"}
+              onClick={() => i18n.changeLanguage("es")}
+              isDesktopOrLaptop={isDesktopOrLaptop}
             />
           </ActionsContainer>
         </Column>

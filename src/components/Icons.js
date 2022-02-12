@@ -1,27 +1,18 @@
-import React from "react";
-
-import {
-  faFacebook,
-  faTwitter,
-  faLinkedin,
-  faStackOverflow,
-  faInstagram,
-  faGithub,
-} from "@fortawesome/free-brands-svg-icons";
-
-import {
-  faBriefcase,
-  faEnvelope,
-  faMobileAlt,
-  faUserClock,
-  faCopy,
-  faCode,
-  faLightbulb,
-  faTimesCircle,
-  faCogs,
-} from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled, { css } from "styled-components";
+import {
+  BsCodeSlash,
+  BsPhone,
+  BsFacebook,
+  BsTwitter,
+  BsInstagram,
+  BsStackOverflow,
+  BsLinkedin,
+  BsGithub,
+  BsBriefcase,
+} from "react-icons/bs";
+import { BiCopy } from "react-icons/bi";
+import { GiTimeTrap } from "react-icons/gi";
+import { AiOutlineMail } from "react-icons/ai";
 
 const Wrapper = styled.div`
   ${({ onClick }) =>
@@ -33,97 +24,73 @@ const Wrapper = styled.div`
     `}
 `;
 
-export const Close = ({ size, onClick }) => (
+export const Code = ({ onClick, isDesktopOrLaptop }) => (
   <Wrapper onClick={onClick}>
-    <FontAwesomeIcon icon={faTimesCircle} size={size} />
+    <BsCodeSlash size={isDesktopOrLaptop && 40} />
   </Wrapper>
 );
 
-export const Light = ({ size, onClick }) => (
+export const Copy = ({ onClick, isDesktopOrLaptop }) => (
   <Wrapper onClick={onClick}>
-    <FontAwesomeIcon icon={faLightbulb} size={size} />
+    <BiCopy size={isDesktopOrLaptop && 40} />
   </Wrapper>
 );
 
-export const Code = ({ size, onClick }) => (
+export const Age = ({ onClick, isDesktopOrLaptop }) => (
   <Wrapper onClick={onClick}>
-    <FontAwesomeIcon icon={faCode} size={size} />
+    <GiTimeTrap size={isDesktopOrLaptop && 40} />
   </Wrapper>
 );
 
-export const Cogs = ({ size, onClick }) => (
-  <Wrapper onClick={onClick} style={{ color: "palevioletred" }}>
-    <FontAwesomeIcon icon={faCogs} size={size} />
-  </Wrapper>
-);
-
-export const Copy = ({ size, onClick }) => (
+export const Phone = ({ onClick, isDesktopOrLaptop }) => (
   <Wrapper onClick={onClick}>
-    <FontAwesomeIcon icon={faCopy} size={size} />
+    <BsPhone size={isDesktopOrLaptop && 40} />
   </Wrapper>
 );
 
-export const Age = ({ size, onClick }) => (
+export const Email = ({ onClick, isDesktopOrLaptop }) => (
   <Wrapper onClick={onClick}>
-    <FontAwesomeIcon icon={faUserClock} size={size} />
+    <AiOutlineMail size={isDesktopOrLaptop && 40} />
   </Wrapper>
 );
 
-export const Phone = ({ size, onClick }) => (
+export const Twitter = ({ onClick, isDesktopOrLaptop }) => (
   <Wrapper onClick={onClick}>
-    <FontAwesomeIcon icon={faMobileAlt} size={size} />
+    <BsTwitter size={isDesktopOrLaptop && 32} />
   </Wrapper>
 );
 
-export const Email = ({ size, onClick }) => (
+export const Instagram = ({ onClick, isDesktopOrLaptop }) => (
   <Wrapper onClick={onClick}>
-    <FontAwesomeIcon icon={faEnvelope} size={size} />
+    <BsInstagram size={isDesktopOrLaptop && 32} />
   </Wrapper>
 );
 
-export const Facebook = ({ size, onClick }) => (
+export const StackOverFlow = ({ onClick, isDesktopOrLaptop }) => (
   <Wrapper onClick={onClick}>
-    <FontAwesomeIcon icon={faFacebook} size={size} />
+    <BsStackOverflow size={isDesktopOrLaptop && 32} />
   </Wrapper>
 );
 
-export const Twitter = ({ size, onClick }) => (
+export const Linkedln = ({ onClick, isDesktopOrLaptop }) => (
   <Wrapper onClick={onClick}>
-    <FontAwesomeIcon icon={faTwitter} size={size} />
+    <BsLinkedin size={isDesktopOrLaptop && 32} />
   </Wrapper>
 );
 
-export const Instagram = ({ size, onClick }) => (
+export const GitHub = ({ onClick, isDesktopOrLaptop }) => (
   <Wrapper onClick={onClick}>
-    <FontAwesomeIcon icon={faInstagram} size={size} />
+    <BsGithub size={isDesktopOrLaptop && 32} />
   </Wrapper>
 );
 
-export const StackOverFlow = ({ size, onClick }) => (
+export const Briefcase = ({ onClick, isDesktopOrLaptop }) => (
   <Wrapper onClick={onClick}>
-    <FontAwesomeIcon icon={faStackOverflow} size={size} />
+    <BsBriefcase size={isDesktopOrLaptop && 40} />
   </Wrapper>
 );
 
-export const Linkedln = ({ size, onClick }) => (
-  <Wrapper onClick={onClick}>
-    <FontAwesomeIcon icon={faLinkedin} size={size} />
-  </Wrapper>
-);
-
-export const GitHub = ({ size, onClick }) => (
-  <Wrapper onClick={onClick}>
-    <FontAwesomeIcon icon={faGithub} size={size} />
-  </Wrapper>
-);
-
-export const Briefcase = ({ size, onClick }) => (
-  <Wrapper onClick={onClick}>
-    <FontAwesomeIcon icon={faBriefcase} size={size} />
-  </Wrapper>
-);
-
-export const English = ({ onClick, disabled }) => (
+export const English = ({ onClick, disabled, isDesktopOrLaptop }) => (
   <Wrapper onClick={onClick}>
     <input
       type="image"
@@ -135,7 +102,7 @@ export const English = ({ onClick, disabled }) => (
   </Wrapper>
 );
 
-export const Spanish = ({ onClick }) => (
+export const Spanish = ({ onClick, isDesktopOrLaptop }) => (
   <Wrapper onClick={onClick}>
     <input type="image" src="/icons/spain-flag.png" border="0" alt="spanish" />
   </Wrapper>

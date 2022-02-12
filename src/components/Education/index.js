@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { useTranslation } from "next-i18next";
-import { useMediaQuery } from "react-responsive";
 
+import useDeviceSize from "../../hooks/useDeviceSize";
 import { Row, Column, SectionTitle, SectionBox } from "../Layout";
 
 const Image = styled.img`
@@ -28,7 +28,8 @@ const ImageWrapper = styled(Column)`
 `;
 
 const Education = () => {
-  const isDesktopOrLaptop = useMediaQuery({ minDeviceWidth: 1224 });
+  const { isDesktopOrLaptop } = useDeviceSize();
+
   const { t } = useTranslation();
 
   return (
