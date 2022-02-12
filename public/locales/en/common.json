@@ -1,0 +1,142 @@
+{
+  "hello": "Hi! I'm",
+  "age": "Age",
+  "email": "Email",
+  "phone": "Phone",
+  "years": "years old",
+  "copied": "Copied",
+  "skills": {
+    "title": "Skills",
+    "items": [
+      {
+        "title": "Javascript",
+        "additionalInfo": [
+          "React",
+          "Node",
+          "es6",
+          "Hooks",
+          "Redux",
+          "Redux toolkit",
+          "Context API",
+          "Typescript",
+          "Webpack",
+          "Jest",
+          "Enzyme",
+          "React testing library"
+        ]
+      },
+      {
+        "title": "Css",
+        "additionalInfo": ["Css", "Styled components", "Responsive design - Css grid - Flexbox"]
+      },
+      {
+        "title": "Java",
+        "additionalInfo": ["Spring", "Jpa", "Jersey", "Swagger", "Spring mongoDB", "Hibernate"]
+      },
+      {
+        "title": "Y más...",
+        "additionalInfo": [
+          "Html",
+          "JSX",
+          "Git",
+          "Sql db",
+          "Nosql db",
+          "AWS",
+          "Firebase: Firestore/Storage/Auth",
+          "Advanced English"
+        ]
+      },
+      {
+        "title": "In Progress!",
+        "additionalInfo": ["Node by UTN Corse", "UX/UI by Coderhouse"]
+      }
+    ]
+  },
+  "experience": {
+    "title": "Professional experience",
+    "items": [
+      {
+        "range": "November 2021 - Present",
+        "title": "React Lead Developer",
+        "description": "As a lead developer, my role implies both bringing support for teammates and developing new products and features. Some of the project's im involved in are Pedidos Ya - Credits Partner Platform (nextjs), Swell Migration CLI (node)",
+        "location": "Remoto"
+      },
+      {
+        "range": "August 2020 - August 2021",
+        "title": "Sr Software Engineer at Santander Tecnología",
+        "description": "I'm part of the Checks Program. I'm part of a squad of tech leads of new microsites within the new platform for enterprises developed in React js, involved in user experience design, development, testing and helping/coaching colleagues in their learning path into new technologies. We use: hooks, typescript, nestjs, styled components, test (jest/enzyme) /coverage > 60%, responsive design with flexbox.",
+        "location": "Remote"
+      },
+      {
+        "range": "September 2019 - August 2020",
+        "title": "React Developer at Park Assist",
+        "description": "Working on the next gen of parking administration platform. Realtime parking management platform. Using React (functional components mainly), styled components and AWS Amplify features such as: Auth, PubSub and Amazon services from console (Iot Core, Iam, S3, etc).",
+        "location": "Palermo, CABA"
+      },
+      {
+        "range": "September 2018 to September 2019",
+        "title": "React Developer - New Aerolineas Argentinas platform project at Valtech",
+        "description": "Working as a Reactjs developer working on Backoffice module for Aerolineas Argentinas project. Using redux, redux-thunk, axios, formik, yup and i18n for internationalization.",
+        "location": "Ramos Mejia, GBA"
+      },
+      {
+        "range": "February 2018 to September 2018",
+        "title": "Software Developer - New Aerolineas Argentinas platform project at Valtech",
+        "description": "Working on backend REST based microservices using JAVA 8 in combination with Spring boot, Spring data mongoDB and Jersey. API documentation using swagger API for Jersey. GIT platform for control version and docker for microservices deployment.",
+        "location": "Ramos Mejia, GBA"
+      },
+      {
+        "range": "October 2016 to February 2018",
+        "title": "Java full stack developer - at CANDOIT",
+        "description": "Working on technical solutions for different systems; such as web systems under J2EE and Oracle platforms. Using frameworks as Struts, Spring MVC, Spring Data JPA and Hibernate among others. Working on real state and assurance business projects.",
+        "location": "Ramos Mejia, GBA"
+      },
+      {
+        "range": "October 2015 to October 2016",
+        "title": "Java Developer and Oracle PL SQL developer at Grupo Mercel S.A",
+        "description": "As Fullstack Java/Oracle developer, i made technical analysis of solutions to requirements made by users of different systems developed/maintained for PAMI. I also did development of web systems under J2EE and Oracle platforms, including systems unit tests. Research and implementation of different technologies such as Hibernate, ZK, Spring core, Spring boot, IBatis, MyBatis on multiple systems. Using GIT and SVN for version control, Junit for testing.",
+        "location": "Balvanera, CABA"
+      },
+      {
+        "range": "April 2014 to September 2015",
+        "title": "Ssr-Sr Oracle PL SQL developer at Close Up International",
+        "description": "As Oracle 11g developer, i have worked on multiple report building scripts which are main company product, with high focus on perfomance.",
+        "location": "Palermo, CABA"
+      },
+      {
+        "range": "July 2012 to April 2014",
+        "title": "Semi Senior Java/PL-SQL System Analyst and Production Support at Acciona IT in CITIBANK offices",
+        "description": "Responsible of the maintenance, incidents and problems resolution of the system used for credits and risks for enterprises at CITIBANK offices. Analyzed and conceptualized changes in system to be applied from incidents to solve root problems. Documented business and technical requirements. Provided support to users during system incidents during dayshift and night shift. Tested new changes and/or incidents resolution and coordinated with technical teams during implementations and system maintenance.",
+        "location": "Martinez, GBA"
+      },
+      {
+        "range": "March 2011 to June 2012",
+        "title": "Application Support - Junior Java and Oracle Developer at Cognisys",
+        "description": "At first as an application production support over SGT system, which manages logical data related to business infrastructure. This implied communication, firstly, with SGT users and on the other, with SGT developers. Issues survey, monitoring and resolving through ticket system. Data handling queries and transactions made productive environment. Promoted after eight months as Java and Oracle PL SQL developer on SGT system. Level 3 production support and minor developments using Java 6, Oracle PL SQL 9 and hibernate.",
+        "location": "Palermo, CABA"
+      }
+    ]
+  },
+  "education": {
+    "title": "Education",
+    "istea": {
+      "name": "ISTEA",
+      "career": "Superior Technician in Software Development",
+      "status": "Finished"
+    },
+    "utn": {
+      "name": "ReactJS developer course",
+      "career": "UTN Buenos Aires"
+    },
+    "udemy_flex": "Complete CSS Flexbox guide",
+    "udemy_css": "Creative CSS Animations, Transitions And Transforms Course"
+  },
+  "view_code": "See source code",
+  "view_english": "Switch to English",
+  "view_spanish": "Switch to Spanish",
+  "send_comment": "Send comments!",
+  "send": "Send",
+  "valid_mail": "Not valid email",
+  "too_short": "Too short!",
+  "required": "Required"
+}

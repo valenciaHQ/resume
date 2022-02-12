@@ -1,0 +1,142 @@
+{
+  "hello": "Hola! Soy",
+  "age": "Edad",
+  "email": "Email",
+  "phone": "Celular",
+  "years": "años",
+  "copied": "Copiado",
+  "skills": {
+    "title": "Habilidades",
+    "items": [
+      {
+        "title": "Javascript",
+        "additionalInfo": [
+          "React",
+          "Node",
+          "es6",
+          "Hooks",
+          "Redux",
+          "Redux toolkit",
+          "Context API",
+          "Typescript",
+          "Webpack",
+          "Jest",
+          "Enzyme",
+          "React testing library"
+        ]
+      },
+      {
+        "title": "Css",
+        "additionalInfo": ["Css", "Styled components", "Responsive design - Css grid - Flexbox"]
+      },
+      {
+        "title": "Java",
+        "additionalInfo": ["Spring", "Jpa", "Jersey", "Swagger", "Spring mongoDB", "Hibernate"]
+      },
+      {
+        "title": "Y más...",
+        "additionalInfo": [
+          "CSS",
+          "Html",
+          "Git",
+          "Sql db",
+          "Nosql db",
+          "AWS",
+          "Firebase: Firestore/Storage/Auth",
+          "Advanced English"
+        ]
+      },
+      {
+        "title": "En progreso!",
+        "additionalInfo": ["Epic React dev Career - https://epicreact.dev/learn"]
+      }
+    ]
+  },
+  "experience": {
+    "title": "Experiencia profesional",
+    "items": [
+      {
+        "range": "Noviembre 2021 - Presente",
+        "title": "React Lead developer",
+        "description": "Como referente, mi role implica brindar soporte a mis compaleros como desarrollar nuevos productos y servicios. Algunos de los proyectos en los que estoy involucrado son: Pedidos Ya: Credits partner platform (nextjs), Swell Migration CLI (node)",
+        "location": "Remoto"
+      },
+      {
+        "range": "Agosto 2020 - Agosto 2021",
+        "title": "Sr Software Engineer at Santander Tecnología",
+        "description": "Formo parte del programa de cheques. Desempeñándome como referente del nuevo micrositio del programa de descuentos desarrollado en Reactjs, formando parte del diseño de la experiencia de usuario, el desarrollo y el acompañamiento de colegas en el aprendizaje de las nuevas tecnologías. Usamos: hooks, typescript, nestjs, styled components, test (jest/enzyme) /coverage > 60%, responsive design con flexbox.",
+        "location": "Remoto"
+      },
+      {
+        "range": "Septiembre 2019 - Agosto 2020",
+        "title": "React Developer en Park Assist",
+        "description": "Trabajando en INX, producto de gestión de estacionamiento inteligente, utilizando React (Version 16.8+ hooks + React context API) y Amplify para acceder a los Servicios AWS (IAM, Iot core, S3, entre otros)",
+        "location": "Palermo, CABA"
+      },
+      {
+        "range": "Septiembre 2018 hasta Septiembre 2019",
+        "title": "React Developer - Proyecto Nueva plataforma Aerolíneas Argentinas en Valtech",
+        "description": "Desarrollo react es6 en plataforma Backoffice para proyecto Aerolineas Argentinas utilizando React-actions, Redux, Formik, YUP, styled-components.",
+        "location": "Ramos Mejia, GBA"
+      },
+      {
+        "range": "Febrero 2018 hasta Septiembre 2018",
+        "title": "Software Developer - Proyecto Nueva plataforma Aerolíneas Argentinas en Valtech",
+        "description": "Desarrollo de micro-servicios REST utilizando springboot, spring data jpa, mongodb y jersey. Documentación de swagger utilizando API swagger-jersey. Utilización de git para control de versiones y docker para deploy de microservicios. Proyecto bajo metodologia scrum.",
+        "location": "Ramos Mejia, GBA"
+      },
+      {
+        "range": "October 2016 to February 2018",
+        "title": "Java full stack developer - at CANDOIT",
+        "description": "Análisis, desarrollo e implementación de modulo Flotas para aplicación interna, cliente AON (seguros). Desarrollos desde cero y modificaciones sobre sistemas web basados en Spring MVC, JPA, Java, Hibernate y Mysql.",
+        "location": "Ramos Mejia, GBA"
+      },
+      {
+        "range": "Octubre 2015 hasta Octubre 2016",
+        "title": "Java Developer and Oracle PL SQL developer en Grupo Mercel",
+        "description": "Mantenimiento de aplicaciones de PAMI. Análisis y desarrollo back end en migración de tecnología de sistema SIDU (mesa entrada) de ANSES.",
+        "location": "Balvanera, CABA"
+      },
+      {
+        "range": "Abril 2014 hasta Septiembre 2015",
+        "title": "Ssr-Sr Oracle PL SQL developer en Close Up International",
+        "description": "Análisis, desarrollo e implementación de distintos procesos generadores de reportes que eran uno de los productos finales de la empresa. Manejo de grandes volúmenes de datos. Versión Oracle 11g.",
+        "location": "Palermo, CABA"
+      },
+      {
+        "range": "Julio 2012 hasta Abril 2014",
+        "title": "Semi Senior Java/PL-SQL System Analyst and Production Support en ACCIONA-IT",
+        "description": "Soporte técnico nivel 2 para aplicación c900 de riesgo crediticio para LATAM.  Resolución y control de tareas de alta criticidad. Guardias nocturnas, comunicación con usuarios de nivel 1. Generación de documentación de cambios y arreglos.",
+        "location": "Martinez, GBA"
+      },
+      {
+        "range": "Marzo 2011 hasta Junio 2012",
+        "title": "Application Support - Junior Java and Oracle Developer en Cognisys",
+        "description": "Al principio, como analista técnico, realicé control y resolución de los issues reportados sobre el sistema de gestión técnica (SGT) en las oficinas de CLARO de San Telmo, convirtiéndome en el referente de dicha aplicación. Luego de ocho meses, me desempeñe como desarrollador Java, recibiendo capacitación en las tecnologías implicadas para el mantenimiento de SGT desde las oficinas de la empresa.",
+        "location": "Palermo, CABA"
+      }
+    ]
+  },
+  "education": {
+    "title": "Educación",
+    "istea": {
+      "name": "ISTEA",
+      "career": "Tecnico Superior en desarrollo de software",
+      "status": "Finalizada"
+    },
+    "utn": {
+      "name": "Curso ReactJS",
+      "career": "Extensión Universitaria - UTN Buenos Aires"
+    },
+    "udemy_flex": "Complete CSS Flexbox guide",
+    "udemy_css": "Creative CSS Animations, Transitions And Transforms Course"
+  },
+  "view_code": "Ver código fuente",
+  "view_english": "Ver en inglés",
+  "view_spanish": "Ver en español",
+  "send_comment": "Enviame comentarios!",
+  "send": "Enviar",
+  "valid_mail": "No es un correo válido",
+  "too_short": "Muy corto!",
+  "required": "Requerido"
+}

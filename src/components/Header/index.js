@@ -1,13 +1,13 @@
-import React from 'react';
-import styled, { css } from 'styled-components';
-import { useMediaQuery } from 'react-responsive';
-import { useTranslation } from 'react-i18next';
+import React from "react";
+import styled, { css } from "styled-components";
+import { useTranslation } from "next-i18next";
 
-import Profile from '../Profile';
-import SocialRow from '../SocialRow';
-import { Row, Column } from '../Layout';
-import { Code, English, Spanish } from '../Icons';
-import { GITHUB_REPOSITORY, DEVICE } from '../../constants';
+import useDeviceSize from "../../hooks/useDeviceSize";
+import Profile from "../Profile";
+import SocialRow from "../SocialRow";
+import { Row, Column } from "../Layout";
+import { Code, English, Spanish } from "../Icons";
+import { GITHUB_REPOSITORY, DEVICE } from "../../constants";
 
 const Wrapper = styled.div`
   display: flex;
@@ -20,8 +20,9 @@ const Wrapper = styled.div`
   ${({ isDesktopOrLaptop }) =>
     isDesktopOrLaptop &&
     css`
-      padding: ${(props) => props.isDesktopOrLaptop && props.theme.measures.desktopPadding};
-      height: ${(props) => props.isDesktopOrLaptop && '45%'};
+      padding: ${(props) =>
+        props.isDesktopOrLaptop && props.theme.measures.desktopPadding};
+      height: ${(props) => props.isDesktopOrLaptop && "45%"};
     `};
 `;
 
@@ -78,35 +79,38 @@ const ActionsContainer = styled(Row)`
   }
 `;
 
-export default () => {
-  const isDesktopOrLaptop = useMediaQuery({ minDeviceWidth: 1224 });
+const Header = () => {
+  const { isDesktopOrLaptop } = useDeviceSize();
   const { i18n } = useTranslation();
+
+  const handleChangeLanguaje = (languaje) => i18n.changeLanguage(languaje);
 
   return (
     <Wrapper>
       <Title isDesktopOrLaptop={isDesktopOrLaptop}>Alejandro Valencia</Title>
-      <SubTitle isDesktopOrLaptop={isDesktopOrLaptop}>Software Engineer</SubTitle>
+      <SubTitle isDesktopOrLaptop={isDesktopOrLaptop}>
+        Software Engineer
+      </SubTitle>
       <Profile />
       <NetworkContainer isDesktopOrLaptop={isDesktopOrLaptop}>
         <SocialRow
-          width={isDesktopOrLaptop ? '250px' : '150px'}
-          iconSize={isDesktopOrLaptop ? '2x' : null}
+          width={isDesktopOrLaptop ? "250px" : "150px"}
+          isDesktopOrLaptop={isDesktopOrLaptop}
           roundedIcons
         />
         <Column>
           <ActionsContainer>
-            <Code onClick={() => window.open(GITHUB_REPOSITORY)} size={isDesktopOrLaptop && '2x'} />
+            <Code
+              onClick={() => window.open(GITHUB_REPOSITORY)}
+              isDesktopOrLaptop={isDesktopOrLaptop}
+            />
             <English
-              onClick={() => {
-                i18n.changeLanguage('en');
-              }}
-              size={isDesktopOrLaptop && '2x'}
+              onClick={() => handleChangeLanguaje("en")}
+              isDesktopOrLaptop={isDesktopOrLaptop}
             />
             <Spanish
-              onClick={() => {
-                i18n.changeLanguage('es');
-              }}
-              size={isDesktopOrLaptop && '2x'}
+              onClick={() => handleChangeLanguaje("es")}
+              isDesktopOrLaptop={isDesktopOrLaptop}
             />
           </ActionsContainer>
         </Column>
@@ -114,3 +118,5 @@ export default () => {
     </Wrapper>
   );
 };
+
+export default Header;
