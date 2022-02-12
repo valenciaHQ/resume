@@ -83,6 +83,8 @@ const Header = () => {
   const { isDesktopOrLaptop } = useDeviceSize();
   const { i18n } = useTranslation();
 
+  const handleChangeLanguaje = (languaje) => i18n.changeLanguage(languaje);
+
   return (
     <Wrapper>
       <Title isDesktopOrLaptop={isDesktopOrLaptop}>Alejandro Valencia</Title>
@@ -103,11 +105,11 @@ const Header = () => {
               isDesktopOrLaptop={isDesktopOrLaptop}
             />
             <English
-              onClick={() => i18n.changeLanguage("en")}
+              onClick={() => handleChangeLanguaje("en")}
               isDesktopOrLaptop={isDesktopOrLaptop}
             />
             <Spanish
-              onClick={() => i18n.changeLanguage("es")}
+              onClick={() => handleChangeLanguaje("es")}
               isDesktopOrLaptop={isDesktopOrLaptop}
             />
           </ActionsContainer>

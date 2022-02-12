@@ -14,7 +14,7 @@ const Wrapper = styled(Column)`
 const Footer = () => (
   <Wrapper>
     <Row style={{ flex: 1, alignItems: "center" }}>
-      <SocialRow width="300px" iconSize="2x" />
+      <SocialRow width="300px" isDesktopOrLaptop />
     </Row>
   </Wrapper>
 );

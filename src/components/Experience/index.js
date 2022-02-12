@@ -20,7 +20,7 @@ const Experience = () => {
       </Row>
       <SectionBox isDesktopOrLaptop={isDesktopOrLaptop}>
         <Column style={{ flex: 1 }}>
-          {/*<Timeline>
+          <Timeline style={{ fontSize: "1rem" }}>
             {ready &&
               t("experience.items", { returnObjects: true }).map(
                 ({ range, title, description, location }, index) => (
@@ -35,7 +35,7 @@ const Experience = () => {
                   </TimelineEvent>
                 )
               )}
-                </Timeline>*/}
+          </Timeline>
         </Column>
       </SectionBox>
     </Column>

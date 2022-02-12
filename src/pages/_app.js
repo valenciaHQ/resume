@@ -26,9 +26,9 @@ const theme = {
     aliceblue: "aliceblue",
   },
   fontSizes: {
-    small: "0.8em",
-    medium: "1em",
-    large: "1.3em",
+    small: "1em",
+    medium: "1.2em",
+    large: "1.4em",
     xLarge: "2rem",
   },
   measures: {
