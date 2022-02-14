@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import { DEVICE_SIZE } from "../constants";
 
-const useDeviceSize = () => {
+const useDeviceSize = (minWidth) => {
   const [isDesktopOrLaptop, setIsDesktopOrLaptop] = useState(false);
   useEffect(() => {
     function handleResize() {
       const width = document.documentElement.clientWidth;
-      if (width < DEVICE_SIZE.laptop) {
+      if (minWidth ? width < minWidth : width < DEVICE_SIZE.laptop) {
         setIsDesktopOrLaptop(false);
       } else {
         setIsDesktopOrLaptop(true);
@@ -15,7 +15,7 @@ const useDeviceSize = () => {
     handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  }, [minWidth]);
 
   return { isDesktopOrLaptop: isDesktopOrLaptop };
 };
