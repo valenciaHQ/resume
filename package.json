@@ -6,7 +6,7 @@
     "babel-preset-next": "^1.4.0",
     "eslint-config-airbnb": "^18.1.0",
     "eslint-config-react-app": "^5.2.1",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "next": "latest",
     "next-i18next": "^10.2.0",
     "react": "latest",
